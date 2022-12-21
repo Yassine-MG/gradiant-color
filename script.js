@@ -10,20 +10,11 @@ function getColor(){
     let CssProp = window.getComputedStyle(body,null).getPropertyValue("background-image");
     codes.textContent = CssProp;
 }
-
-
-
-
-
 function returnColor(){
     body.style.background = "linear-gradient("+ options.value +","+ color_1.value + "," + color_2.value + ")";
     body.style.backgroundRepeat ="no-repeat";   
     getColor()
 }
-
-
-
-
 document.querySelector('select[name = "toDirection"]').addEventListener("change",()=>{
    returnColor();
 }) 
